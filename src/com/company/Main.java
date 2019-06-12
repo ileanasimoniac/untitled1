@@ -3,40 +3,30 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        helloMyName();
-        operatia1();
-        operatia2();
-        operatia3();
-        operatia4();
-        operatia5();
-        operatia6();
-    }
+        Calculator calculator;
+        calculator = new Calculator();
 
-    private static void helloMyName() {
-        System.out.println("Hello Ileana");
-    }
+        LogicalOp op = new LogicalOp();
+        int biggest = op.checkBiggerNumber(2,3);
+        System.out.println("The bigger number is: " + biggest);
 
-    private static void operatia1() {
-        System.out.println(10 + 21);
-    }
+        String stringCompare = op.isStringFastTrackIT("FastTrackIT");
+        System.out.println(stringCompare);
 
-    private static void operatia2() {
-        System.out.println((double) 10 / 3);
-    }
+        String stringAndIntCompare = op.isStringFastTrackITAnNumber("FastTrackIT", 2);
+        System.out.println(stringAndIntCompare);
 
-    private static void operatia3() {
-        System.out.println(-5 + 8 * 6);
-    }
+        String forecast = op.forecast(9);
+        System.out.println(forecast);
 
-    private static void operatia4() {
-        System.out.println((55 + 9) % 9);
-    }
+        String intCompare = op.intCompare(12);
+        System.out.println(intCompare);
 
-    private static void operatia5() {
-        System.out.println(20 + -3 * 5 / 8);
-    }
+        String numberIs = op.careENumarul(3);
+        System.out.println(numberIs);
 
-    private static void operatia6() {
-        System.out.println(5 + 15 / 3 * 2 - 8 % 3);
+        System.out.println(op.isNumberEven(12));
+        System.out.println(op.isEligibleToVote(17));
+        System.out.println(op.greatherNumberOfThree(17,33,24));
     }
 }
