@@ -97,4 +97,113 @@ public class LogicalOp {
             return numar3;
         }
     }
+
+    public void panaLa100(int numar) {
+        if (numar < 100) {
+            for (int i = numar; i <= 100; i++) {
+                System.out.println(i);
+            }
+        } else {
+
+        }for (int i = numar; i >= 100; i--) {
+            System.out.println(i);
+        }
+    }
+
+    public void panaLaMinus100(int numar) {
+        if (numar < 100) {
+            for (int i = numar; i <= -100; i++) {
+                System.out.println(i);
+            }
+        } else {
+
+        }for (int i = numar; i >= -100; i--) {
+            System.out.println(i);
+        }
+    }
+
+    public void deLaPanaLa(int x, int y) {
+        if (x < y) {
+            for (int i = x; i <= y; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = x; i >= y; i--) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public void deLaPanaLaCrescator(int x, int y) {
+        if (x < y) {
+            for (int i = x; i <= y; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = y; i <= x; i++) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public void numerePareDela1La100() {
+        for(var i = 1; i<=100; i++) {
+            if (i%2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public void numereImPareDela1La100() {
+        for(var i = 1; i<=100; i++) {
+            if (i%2 == 1) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    public void sumaPanaLa100(int numar) {
+        int suma = 0;
+        if (numar < 100) {
+            for (int i = numar; i <= 100; i++) {
+                suma = suma + i;
+            }
+        } else {
+
+        }for (int i = numar; i >= 100; i--) {
+            suma = suma + i;
+        }
+
+        System.out.println("Suma este: " + suma);
+    }
+
+    public void sumaPanaLa100SiMedia(int numar) {
+        int suma = 0;
+        int j = 0;
+        if (numar < 100) {
+            for (int i = numar; i <= 100; i++) {
+                suma = suma + i;
+                j = j + 1;
+            }
+        } else {
+
+        }for (int i = numar; i >= 100; i--) {
+            suma = suma + i;
+            j = j +1;
+        }
+
+        System.out.println("Suma este: " + suma);
+        System.out.println("Media este: " + suma/j);
+    }
+
+    public void afisezaTiparStelute() {
+        for (var i = 1; i <= 7; i++) {
+            String linie = "";
+            for (var j = 8 - i ; j>= 1; j--) {
+                linie = linie.concat("*");
+            }
+            System.out.println(linie);
+        }
+    }
+
 }
