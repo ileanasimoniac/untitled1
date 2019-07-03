@@ -14,6 +14,21 @@ public class Calculator {
         return rezultat;
     }
 
+    public int adunare(int primulNumar, int alDoileaNumar, int alTreileaNumar) {
+        int rezultat = primulNumar + alDoileaNumar + alTreileaNumar;
+        return rezultat;
+    }
+
+    public float adunare(float primulNumar, float alDoileaNumar) {
+        float rezultat = primulNumar + alDoileaNumar;
+        return rezultat;
+    }
+
+    public float adunare(float primulNumar, float alDoileaNumar, float alTreileaNumar) {
+        float rezultat = primulNumar + alDoileaNumar + alTreileaNumar;
+        return rezultat;
+    }
+
     public int scadere(int primulNumar, int alDoileaNumar) {
         int rezultat = primulNumar - alDoileaNumar;
         return rezultat;

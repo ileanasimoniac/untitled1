@@ -304,7 +304,7 @@ public class LogicalOp {
         int counter = 0;
         int suma = 0;
         while (x <= y) {
-            if (x%7==0) {
+            if (x % 7 == 0) {
                 suma = suma + x;
                 counter++;
             }
@@ -320,8 +320,7 @@ public class LogicalOp {
         int n = 20;
         int t1 = 0;
         int t2 = 1;
-        while (i <= n)
-        {
+        while (i <= n) {
             System.out.print(t1 + " + ");
             int sum = t1 + t2;
             t1 = t2;
@@ -348,7 +347,7 @@ public class LogicalOp {
                 System.out.print("Woza");
                 stegulet = true;
             }
-            if ( ! stegulet) {
+            if (!stegulet) {
                 System.out.print(i);
             }
             System.out.print(" ");
@@ -358,5 +357,115 @@ public class LogicalOp {
             }
             i++;
         }
+    }
+
+    public void generateArray100() {
+        int[] intArray = new int[100];
+        for (int i = 1; i <= 100; i++) {
+            intArray[i - 1] = i;
+            System.out.println("Element at index " + (i - 1) +
+                    " : " + intArray[i - 1]);
+        }
+    }
+
+    public int[] arrayPare100(int[] intArray) {
+        int index = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                intArray[index] = i;
+                System.out.println("Element at index " + index +
+                        " : " + intArray[index]);
+                index++;
+            }
+        }
+
+        return intArray;
+    }
+
+    public int mediaArray(int[] intArr) {
+        int suma = 0;
+        for (int i = 0; i < intArr.length; i++) {
+            suma = suma + intArr[i];
+        }
+
+        return suma / intArr.length;
+    }
+
+    public boolean stringInclude(String[] stringArr, String val) {
+
+        for (String s : stringArr) {
+            if (val.equals(s)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public int indexOf(int[] intArr, int val) {
+        for (int i = 1; i < intArr.length; i++) {
+            if (intArr[i] == val) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public void printTablou() {
+        String[][] tablou = new String[10][10];
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                tablou[i][j] = "- ";
+            }
+        }
+
+        for (int i = 0; i < 10; i++) {
+            int j = 0;
+            while (j < 10) {
+                System.out.print(tablou[i][j]);
+                j++;
+            }
+            System.out.print("\n");
+        }
+    }
+
+    public int[] exclude(int[] intArr, int exclude) {
+        int[] returnArr = intArr;
+        int index = this.indexOf(intArr, exclude);
+        if (index > -1) {
+            returnArr = new int[intArr.length - 1];
+            int j = 0;
+            for(int i = 0; i < intArr.length; i++) {
+                if (i != index) {
+                    returnArr[j] = intArr[i];
+                    j++;
+                }
+            }
+        }
+        return returnArr;
+    }
+
+    public int alDoileaCelMaiMic(int[] intArr) {
+        int mic1 = 10000;
+        int mic2 = 10000;
+
+        for(int numar:intArr) {
+            if (numar < mic1) {
+                mic1 = numar;
+            }
+            if (numar > mic1 && numar < mic2) {
+                mic2 = numar;
+            }
+        }
+        return mic2;
+    }
+
+    public int[] copy(int[] source, int[] destination) {
+        destination = new int[source.length];
+        for (int i = 0; i < source.length; i++) {
+            destination[i] = source[i];
+        }
+        return destination;
     }
 }

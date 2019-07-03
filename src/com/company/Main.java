@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -55,6 +57,35 @@ public class Main {
         op.CozaLozaWoza();
         // end tema Java While Loop //
 
+        //start Tema - Java Arrays
+        calculator.adunare(10, 12, 11);
+        op.generateArray100();
+        int [] intArr = new int[50];
+        op.arrayPare100(intArr);
+
+        int media = op.mediaArray(new int[]{1,2,3,4,5,6,7,8,9});
+        System.out.println("Media este: "+ media);
+
+        boolean exista = op.stringInclude(new String[]{"a","b", "test"}, "test");
+        System.out.println("String exista: "+ exista);
+
+        int index = op.indexOf(new int[]{10,12,23,44,12,13}, 44);
+        System.out.println("Indexul este: "+ index);
+
+        op.printTablou();
+
+        int[] arr = op.exclude(new int[]{10,11,22,23,44}, 22);
+        System.out.print(Arrays.toString(arr));
+        System.out.println("\n");
+
+        int mic = op.alDoileaCelMaiMic(new int[]{1,22,3,4,5,6,7});
+        System.out.print(mic);
+        System.out.println("\n");
+
+        int[] arr1 = op.copy(new int[]{1,2,3,4}, new int[]{});
+        System.out.print(Arrays.toString(arr1));
+        System.out.println("\n");
+        //end Tema - Java Arrays
         //tema vechi
        /*
         System.out.println("The bigger number is: " + biggest);
