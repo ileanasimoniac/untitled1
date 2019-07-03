@@ -42,8 +42,18 @@ public class Main {
         System.out.println("Exercitiul 9");
         op.afisezaTiparStelute();
 
-
-
+        // start tema Java While Loop //
+        op.afiseazaWhilePanaLa100(90);
+        op.afiseazaWhilePanaLaMinus100(0);
+        op.whileDeLaPanaLa(10, 20);
+        op.whileDeLaPanaLaCrescator(20, 15);
+        op.whileParePanaLa100();
+        op.whileImparePanaLa100();
+        op.whileSumaAndMedia();
+        op.whileIntervalMediaDivizibil7(1, 100);
+        op.fibonaci();
+        op.CozaLozaWoza();
+        // end tema Java While Loop //
 
         //tema vechi
        /*

@@ -105,7 +105,8 @@ public class LogicalOp {
             }
         } else {
 
-        }for (int i = numar; i >= 100; i--) {
+        }
+        for (int i = numar; i >= 100; i--) {
             System.out.println(i);
         }
     }
@@ -117,7 +118,8 @@ public class LogicalOp {
             }
         } else {
 
-        }for (int i = numar; i >= -100; i--) {
+        }
+        for (int i = numar; i >= -100; i--) {
             System.out.println(i);
         }
     }
@@ -147,16 +149,16 @@ public class LogicalOp {
     }
 
     public void numerePareDela1La100() {
-        for(var i = 1; i<=100; i++) {
-            if (i%2 == 0) {
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
                 System.out.println(i);
             }
         }
     }
 
     public void numereImPareDela1La100() {
-        for(var i = 1; i<=100; i++) {
-            if (i%2 == 1) {
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 1) {
                 System.out.println(i);
             }
         }
@@ -170,7 +172,8 @@ public class LogicalOp {
             }
         } else {
 
-        }for (int i = numar; i >= 100; i--) {
+        }
+        for (int i = numar; i >= 100; i--) {
             suma = suma + i;
         }
 
@@ -187,23 +190,173 @@ public class LogicalOp {
             }
         } else {
 
-        }for (int i = numar; i >= 100; i--) {
+        }
+        for (int i = numar; i >= 100; i--) {
             suma = suma + i;
-            j = j +1;
+            j = j + 1;
         }
 
         System.out.println("Suma este: " + suma);
-        System.out.println("Media este: " + suma/j);
+        System.out.println("Media este: " + suma / j);
     }
 
     public void afisezaTiparStelute() {
         for (var i = 1; i <= 7; i++) {
             String linie = "";
-            for (var j = 8 - i ; j>= 1; j--) {
+            for (var j = 8 - i; j >= 1; j--) {
                 linie = linie.concat("*");
             }
             System.out.println(linie);
         }
     }
 
+    public void afiseazaWhilePanaLa100(int numar) {
+        if (numar >= 100) {
+            while (numar >= 100) {
+                System.out.println(numar);
+                numar--;
+            }
+        } else {
+            while (numar <= 100) {
+                System.out.println(numar);
+                numar++;
+            }
+        }
+    }
+
+    public void afiseazaWhilePanaLaMinus100(int numar) {
+        if (numar >= -100) {
+            while (numar >= -100) {
+                System.out.println(numar);
+                numar--;
+            }
+        } else {
+            while (numar <= -100) {
+                System.out.println(numar);
+                numar++;
+            }
+        }
+    }
+
+    public void whileDeLaPanaLa(int x, int y) {
+        if (x < y) {
+            while (x <= y) {
+                System.out.println(x);
+                x++;
+            }
+        } else {
+            while (x >= y) {
+                System.out.println(x);
+                x--;
+            }
+        }
+    }
+
+    public void whileDeLaPanaLaCrescator(int x, int y) {
+        if (x < y) {
+            while (x <= y) {
+                System.out.println(x);
+                x++;
+            }
+        } else {
+            while (y <= x) {
+                System.out.println(y);
+                y++;
+            }
+        }
+    }
+
+    public void whileParePanaLa100() {
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+
+    public void whileImparePanaLa100() {
+        int i = 1;
+        while (i <= 100) {
+            if (i % 2 == 1) {
+                System.out.println(i);
+            }
+            i++;
+        }
+    }
+
+    public void whileSumaAndMedia() {
+        int counter = 0;
+        int x = 111;
+        int y = 8899;
+        int suma = 0;
+        while (x <= y) {
+            suma = suma + x;
+            counter++;
+            x++;
+        }
+        System.out.println("Suma este: " + suma);
+        System.out.println("Media este: " + suma / counter);
+    }
+
+    public void whileIntervalMediaDivizibil7(int x, int y) {
+        int counter = 0;
+        int suma = 0;
+        while (x <= y) {
+            if (x%7==0) {
+                suma = suma + x;
+                counter++;
+            }
+            x++;
+        }
+        System.out.println("Suma este: " + suma);
+        System.out.println("Media este: " + suma / counter);
+    }
+
+
+    public void fibonaci() {
+        int i = 1;
+        int n = 20;
+        int t1 = 0;
+        int t2 = 1;
+        while (i <= n)
+        {
+            System.out.print(t1 + " + ");
+            int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+            i++;
+        }
+    }
+
+    public void CozaLozaWoza() {
+        System.out.print("\n");
+        boolean stegulet;
+        int i = 1;
+        while (i <= 110) {
+            stegulet = false;
+            if (i % 3 == 0) {
+                System.out.print("Coza");
+                stegulet = true;
+            }
+            if (i % 5 == 0) {
+                System.out.print("Losa");
+                stegulet = true;
+            }
+            if (i % 7 == 0) {
+                System.out.print("Woza");
+                stegulet = true;
+            }
+            if ( ! stegulet) {
+                System.out.print(i);
+            }
+            System.out.print(" ");
+
+            if (i % 11 == 0) {
+                System.out.println();
+            }
+            i++;
+        }
+    }
 }
