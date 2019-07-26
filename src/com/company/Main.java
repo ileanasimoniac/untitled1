@@ -1,11 +1,19 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        Calculator calculator;
+
+        Read read = new Read();
+        read.readList();
+        LogicalOp op = new LogicalOp();
+        op.getIndexValue(new int[]{1,2,3,4,5,6,7,8,9}, 122);
+        op.wait2();
+        //teme vechi
+        /*Calculator calculator;
         calculator = new Calculator();
 
         LogicalOp op = new LogicalOp();
@@ -84,7 +92,7 @@ public class Main {
 
         int[] arr1 = op.copy(new int[]{1,2,3,4}, new int[]{});
         System.out.print(Arrays.toString(arr1));
-        System.out.println("\n");
+        System.out.println("\n");*/
         //end Tema - Java Arrays
         //tema vechi
        /*

@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class LogicalOp {
 
     public LogicalOp() {
@@ -467,5 +469,23 @@ public class LogicalOp {
             destination[i] = source[i];
         }
         return destination;
+    }
+
+    public void getIndexValue(int[] arr, int pos) {
+        try {
+            System.out.print(arr[pos]);
+        } catch (Exception e) {
+            System.out.print("Inside catch, number too large");
+        }
+    }
+
+    public void wait2() {
+        try {
+            Scanner in = new Scanner(System.in);
+            long wait = in.nextLong() * 1000;
+            Thread.sleep(wait);
+        } catch (Exception e) {
+
+        }
     }
 }
